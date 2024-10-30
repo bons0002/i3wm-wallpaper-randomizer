@@ -21,7 +21,7 @@ kill_previous() {
     can_exit=false
 
     # Send TERM signal to all instances of this process (Since, can_exit is false, this instance won't terminate)
-    pkill -f bg-slideshow.sh
+    pkill -f $( basename $0 )
 }
 
 # Randomize the background at a given frequency
